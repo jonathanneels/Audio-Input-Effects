@@ -6,6 +6,8 @@ In the process I've also added some new possibilities;
 * Record the audio from your live performance.
 * Choose a sound file instead of the microphone to add effects to. 
 
+You need Node.js to start this project locally. 
+Typ in command prompt (Windows) 'node index.js' and have fun!
 
 ------------------------------------------------------------------------------------------------------------------------------------------------------
 The original project can be found here: https://github.com/cwilso/Audio-Input-Effects
