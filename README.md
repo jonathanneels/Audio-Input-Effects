@@ -1,6 +1,6 @@
 This project is based on the (live microphone) Audio-Input-Effects by cwilco. 
 Unfortunatly that project is abandoned (it did not had an update for over 6 years) 
-and has limit support for modern browsers (Chrome). 
+and has limited support for modern browsers (Chrome). 
 
 In the process I've also added some new possibilities;
 * Record the audio from your live performance.
