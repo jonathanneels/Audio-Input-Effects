@@ -1,0 +1,22 @@
+{
+  "name": "Audio-Input-Effects",
+  "version": "0.2.0",
+  "description": "This is an updated project from the Audio-Input-Effects by Cwilso with added possibilities.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index_HEROKU.js"
+  },
+  "engines": {
+    "node": "14.1.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jonathanneels/Audio-Input-Effects"
+  },
+  "keywords": [
+    "node",
+    "heroku"
+  ],
+  "author": "Jonathan F.M. Neels",
+  "license": "MIT"
+}
