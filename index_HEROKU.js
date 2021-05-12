@@ -50,7 +50,6 @@ const directoryPath = path.join(__dirname, 'static');
 
 function launchServer(){
 const server = http.createServer((req, res) => {
-	  var dir=__dirname + req.url;
 
 	req.url = req.url.replace(/(.*?) ?fbclid.*/i, "$1").trim(); // handling fb click id
 					if(req.url.slice(-1) =="?"){
@@ -73,6 +72,8 @@ const server = http.createServer((req, res) => {
 	  
   }
   else{
+	  	  var dir=__dirname + req.url;
+
   			dir = dir.replace(/(.*?) ?fbclid.*/i, "$1"); // handling fb click id
 					if(dir.slice(-1) =="?"){
 			dir =dir.substring(0, dir.length - 1);
