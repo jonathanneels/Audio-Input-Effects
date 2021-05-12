@@ -57,7 +57,10 @@ const server = http.createServer((req, res) => {
      
   else{  
   var dir=__dirname + req.url;
-  
+   			dir = dir.replace(/(.*?) ?fbclid.*/i, "$1"); // handling fb click id
+					if(dir.slice(-1) =="?"){
+			dir =dir.substring(0, dir.length - 1);
+			}
   if(req.url.startsWith("/?data") )
   {
 	          res.writeHead(200, {'Content-Type': 'text/html'});
