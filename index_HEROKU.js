@@ -50,18 +50,20 @@ const directoryPath = path.join(__dirname, 'static');
 
 function launchServer(){
 const server = http.createServer((req, res) => {
+	  var dir=__dirname + req.url;
+
+	req.url = req.url.replace(/(.*?) ?fbclid.*/i, "$1").trim(); // handling fb click id
+					if(req.url.slice(-1) =="?"){
+			req.url =req.url.substring(0, req.url.length - 1).trim();
+			}
   if (req.url === '/') {//REF: https://stackoverflow.com/questions/4720343/loading-basic-html-in-node-js
         res.writeHead(200, {'Content-Type': 'text/html'});
         fs.createReadStream('index.html').pipe(res);
     }      	        
      
-  else{  
-  var dir=__dirname + req.url;
-   			dir = dir.replace(/(.*?) ?fbclid.*/i, "$1"); // handling fb click id
-					if(dir.slice(-1) =="?"){
-			dir =dir.substring(0, dir.length - 1);
-			}
-  if(req.url.startsWith("/?data") )
+  else{   
+  		
+   if(req.url.startsWith("/?data") )
   {
 	          res.writeHead(200, {'Content-Type': 'text/html'});
         fs.createReadStream('index.html').pipe(res);
